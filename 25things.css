@@ -1,0 +1,80 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.headline {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    margin-top: 40px;
+}
+
+.headline p {
+    padding: 3px 5px;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
+    row-gap: 16px;
+    column-gap: 16px;
+    text-align: center;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.circle {
+    display: grid;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    text-align: center;
+    place-content: center;
+}
+
+.circle:hover {
+    background-color: black;
+    color: white;
+    cursor: grab;
+}
+
+.circle a:hover {
+    color: white;
+    cursor: grab;
+}
+
+.table a {
+    text-decoration: none;
+    color: black;
+}
+
+footer p a {
+    color: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .modal {
+        width: 90%;
+        left: 5%;
+        top: 10%;
+    }
+
+    .modal-content {
+        padding: 10px;
+    }
+
+    .close-button {
+        top: 5px;
+        right: 5px;
+    }
+}

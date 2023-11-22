@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alternatives of screentime</title>
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'tjs8zlf',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <style>
+    body {
+      font-family: "paralucent-condensed", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+    <div style="text-align: center;"><br><br><br><br><br><br><br>
+      <span style="color: #f40;">alternatives of screentime</span>
+    </div>
+    <br>
+    <div style="text-align: center;">
+      <button onclick="myFunction()" class="btnpick" id="select">Press</button>
+    </div>
+    <br>
+    <div class="main">
+      <div style="text-align: center">
+        <p id="result"></p>
+      </div>
+    </div>
+      <script>
+        function myFunction() {
+          idArray = new Array()
+          idArray [1] = "산책 30분 후 돌아오기"
+          idArray [2] = "일기 쓰기"
+          idArray [3] = "Siri에게 아무 노래나 재생해달라고 요청"
+          idArray [4] = "계란 완벽한 반숙으로 삶기"
+          idArray [5] = "펀치니들 만들기"
+          idArray [6] = "악기 연주"
+          idArray [7] = "sudoku.com/ 에서 스도쿠 풀기"
+          idArray [8] = "눈 감고 집은 책 한 챕터 읽기"
+          idArray [9] = "가고 싶은 여행지 정하기"
+          idArray [10] = "옷장 정리하기"
+          idArray [11] = "당장 영화 보기"
+          idArray [12] = "잔디밭으로 나가 눕기"
+          idArray [13] = "www.chess.com/ 에서 온라인 체스 두기"
+          idArray [14] = "www.jaroflemons.com/brie-pasta-recipe/ 를 참고한 브리 치즈 파스타 만들기"
+          idArray [15] = "명상하기"
+          idArray [16] = "누군가에게 편지쓰기"
+          idArray [17] = "플랭크 2분 도전하기"
+          idArray [18] = "www.rulesofsport.com/sports/baseball.html 에서 야구 경기 규칙 익히기"
+          idArray [19] = "웹사이트 만들기"
+          idArray [20] = "식물 심기"
+        
+          document.getElementById("select").onclick = myFunction;
+          randomParagraph = Math.floor(Math.random()*20);
+        
+          document.getElementById("result").innerHTML = idArray[randomParagraph + 1];       
+        }
+      </script>
+</body>
+</html>

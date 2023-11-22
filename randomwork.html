@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random work generator</title>
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'jxq3dyf',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+
+    <title>Random Change</title>
+    <style>
+    body {
+        font-family: "pretendard", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin-left: 15px;
+        background-color: #f0ffb4;
+        font-size: 20px;
+    }
+
+    .title {
+        font-weight: 700;
+    }
+
+    #headline {
+        color: #474dff;
+    }
+
+    .text-container {
+    display: flex;
+    align-items: center;
+    }
+
+    .title {
+    margin-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h3 id="headline">Daily Routine Generator</h3>
+    <button id="btn" onclick="changeText()">generate routine</button>
+    <br><br>
+    <div class="text-container">
+        <div class="title">07:00 am</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">08:00 am</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">09:00 am</div>
+    <div class="text"></div></div>
+        
+    <div class="text-container">
+        <div class="title">10:00 am</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">11:00 am</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">12:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">13:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">14:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">15:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">16:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">17:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">18:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">19:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">20:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">21:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">22:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">23:00 pm</div>
+    <div class="text"></div></div>
+
+    <div class="text-container">
+        <div class="title">12:00 am</div>
+    <div class="text"></div></div>
+
+    <script>
+    const containers = document.getElementsByClassName("text-container");
+    const options = [
+    ["기상", "잠자기", "잠에서 깨기", "침대 정리하기", "침대에서 20분간 빈둥거리기"], //7am
+    ["대구알 스프레드 토스트 먹기", "어린잎 모짜렐라 샐러드 만들어 먹기", "요가 가기", "30분동안 빠르게 걷기", "어제 샤워하지 않은 것을 후회하며 최대한 빠르게 샤워하기", "yourahong.com에 접속하기", "영양제 챙겨먹기"], //8am
+    ["학교에 가기 위해 지하철 타기", "샤워하기", "아침 햇살을 받으며 공원을 걷기", "브런치 먹기", "yourahong.com에 접속하기", "오늘 하루가 괜찮을지 불안해 하기"], //9am
+    ["책상에 앉기", "노트북을 열어 할 일을 계획하기", "밀린 메일 읽기", "yourahong.com에 접속하기", "지각을 두려워하며 학교까지 빠르게 달리기", "물통에 물 채우기"], //10am
+    ["강의 듣기", "점심 메뉴 고르기", "책 읽(는 척하)기", "yourahong.com에 접속하기"], //11am
+    ["구내식당에서 점심 먹기", "집밥 먹기", "점심 먹는 것을 미루기", "점심을 먹으며 친구들과 떠들기", "yourahong.com에 접속하기"], //12pm
+    ["낮잠 자기", "기타 연습하기", "설거지하기", "글쓰기", "yourahong.com에 접속하기", "노곤함을 즐기기"], //1pm
+    ["아무것도 하지 않았음을 자책하며 다시 책상에 앉기", "심호흡하기", "웹사이트 만들기", "yourahong.com에 접속하기"], //2pm
+    ["밀린 일 처리 하기", "햇살을 즐기며 산책하기", "재미있는 유튜브 영상 시청", "yourahong.com에 접속하기"], //3pm
+    ["줌 회의하기", "집안일하기", "강의 듣기", "yourahong.com에 접속하기", "오늘 하루가 거지같다고 쓸데없이 화내기"], //4pm
+    ["도서관에서 밀린 일 처리하기", "점심 메뉴 고르기", "기타 연습하기", "yourahong.com에 접속하기"], //5pm
+    ["순두부찌개 먹기", "마늘이 들어간 오일파스타 만들기", "yourahong.com에 접속하기", "맛집에 찾아가기", "야구 중계 보기"], //6pm
+    ["맥주 마시기", "인터벌 운동 30분 하기", "yourahong.com에 접속하기"], //7pm
+    ["디제이가 있는 바에 가기", "집으로 돌아가는 지하철 타기", "yourahong.com에 접속하기", "마트에 들러 내일 먹을 식재료 사기"], //8pm
+    ["친구들과 맛있는 저녁 먹기", "갤러리를 정리하며 추억을 상기시키기", "30분간 달리기", "yourahong.com에 접속하기", "피곤하다는 핑계로 아무것도 하지 않기"], //9pm
+    ["침대에 누워있기", "영화 보기", "yourahong.com에 접속하기"], //10pm
+    ["샤워하기", "음악 듣기", "방구석에서 광란의 파티 열기", "일기쓰기", "yourahong.com에 접속하기"], //11pm
+    ["샤워하기", "명상하기", "잠자기", "yourahong.com에 접속하기", "잠에 들려고 노력하기"]  //12am
+    ];
+
+    function changeText() {
+    for (let i = 0; i < containers.length; i++) {
+    const container = containers[i];
+    const title = container.getElementsByClassName("title")[0];
+    const text = container.getElementsByClassName("text")[0];
+    const randomIndex = Math.floor(Math.random() * options[i].length);
+    const selectedText = options[i][randomIndex];
+    // title.innerHTML = "Title " + (i + 1);
+    text.innerHTML = selectedText;
+    }
+    }
+    </script> 
+</body>
+</html>

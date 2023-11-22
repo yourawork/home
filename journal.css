@@ -1,0 +1,79 @@
+body {
+    font-family: 'Instrument Serif', sans-serif;
+    background-color: rgb(221, 248, 255);
+    letter-spacing: 2px;
+    overflow-x: scroll;
+}
+
+a:hover {
+    color:black;
+}
+
+.sidenav {
+    position: fixed;
+    height: 98vh;
+    width: 190px;
+    /* margin-left: 5px; */
+    margin: 5px 7px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0px 3px;
+    /* border-right: hidden 2px; */
+    border: inset #b3b3b3 2px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: inset #b3b3b3 1.5px ;
+    margin: 30px 0px;
+}
+
+.topnav {
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    top: 0;
+    left: 213px;
+    margin: 5px 7px;
+    border: inset #b3b3b3 2px;
+    text-align: center;
+    align-items: center;
+}
+
+#current-date, .clock, .intro {
+    margin: 12px auto;
+    display: inline-block;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+}
+
+.main {
+    margin-left: 240px;
+    margin-top: 72px;
+    padding: 20px;
+    width : 65%;
+    letter-spacing: 1.5px;
+    position: fixed;
+    overflow-x: scroll;
+}
+
+.tab button {
+    font-family: 'Instrument Serif', serif;
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    color: #0000FF;
+    text-decoration: underline;
+    text-align:center;
+    display:inline;
+    cursor: pointer;
+}
+
+.tab {
+    font-size: 16px;
+    overflow: scroll;
+    text-overflow: clip;
+}

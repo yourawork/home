@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pwgenerator.css">
+    <title>password generator</title>
+
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'tjs8zlf',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <div class="headline">
+        <h2>Password Generator</h2>
+        <br> 
+        Creates a 12-digit password that contains numbers, special characters and alphabets.
+    </div>
+    <br> <br> <br>
+    <div class="generator">
+        <button id="generateButton">Generate Password</button>
+        
+        <br><br>
+        <div id="output"></div>
+        <br><br>
+        <button id="copyButton">Copy to Clipboard</button>
+    </div>
+    <br> <br> <br>
+    <div class="alert">
+        <p class="alert1">생성된 비밀번호 정보를 수집하지 않습니다. <br> 안심하고 쓰세요! </p>
+        <p>we don't collect any of your generated password information!</p>
+    </div>
+    <script>
+      const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!,~*^$%&;';
+  
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      document.getElementById('generateButton').addEventListener('click', function() {
+        const randomArray = [];
+  
+        for (let i = 0; i < 12; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length);
+          randomArray.push(characters[randomIndex]);
+        }
+  
+        shuffleArray(randomArray);
+        
+        const outputDiv = document.getElementById('output');
+        outputDiv.textContent = randomArray.join('');
+      });
+
+      document.getElementById('copyButton').addEventListener('click', function() {
+      const outputText = document.getElementById('output').textContent;
+      const textArea = document.createElement('textarea');
+      textArea.value = outputText;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      alert('Copied to clipboard.');
+    });
+    </script>
+</body>
+</html>

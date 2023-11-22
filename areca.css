@@ -1,0 +1,59 @@
+body {
+    font-family: "ocr-b-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing :-2.2px;
+    background-color: #f0f6ff;
+    background-image: url(https://i.ibb.co/G9VHbHH/com-apple-Pasteboard-Qc-Iqhm.png);
+    backface-visibility: inherit; 
+    background-size: 25vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(3px);
+}
+
+img {
+    opacity: 40%;
+}
+
+.headline {
+    color: #0000ff;
+    text-align: center;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+.column {
+    display: grid;
+    text-align: center;
+    place-content: center;
+    border-bottom: 1.2px solid #0000ff;
+}
+
+.message1, .message2, .comment {
+    display: grid;
+    white-space: normal;
+    margin: 10px 5px;
+}
+
+.comment {
+    letter-spacing :0px;
+}
+
+.wrapper{
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 150px;
+}
+
+footer{
+    height: 150px;
+    position : relative;
+    transform : translateY(-100%);
+}

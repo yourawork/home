@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    align-items: center;
+    font-family: "tt-globs", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.headline {
+    margin: 20vh 5vw;
+}
+
+.headline h1 {
+    animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes glow {
+	from {
+        text-shadow: 1px 1px 12px #008cff;
+    }
+    to {
+        text-shadow: 1px 1px 15px #ff006a;
+    }
+}
+
+a {
+    color: #0000ff;
+}
+
+@media screen and (max-width: 480px) {
+    .headline {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 481px) {
+    .headline {
+        font-size: 30px;
+    }
+}

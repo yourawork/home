@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Parks in Chicago</title>
+    <link rel="stylesheet" href="chipark.css">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'oaw3hqh',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+</head>
+<body>
+    <div class="headline">
+        <p>25 parks in Chicago</p>
+    </div>
+    <br>
+    <div class="table">
+        <div class="circle openModal mdp">Harold Washington Park</div>
+        <div class="circle openModal mdp">Maggie Daley Park</div>
+        <div class="circle openModal lsp">Lake <br> Shore Park</div>
+        <div class="circle openModal pp">Pritzker Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+        <div class="circle openModal">Park</div>
+    </div>
+  <br> <br> <br>
+    <footer>
+        <hr>
+        <p>
+            last update: Sep 24th 2023 / 
+            if you know nice park in chicago, please let me <a href="mailto:hello@yourahong.com" class="link">know.</a> <br>
+            series: <a href="/chicago/chibuy.html">25 things in Chicago</a> &nbsp; <a href="/chicago/chiplace.html">25 places in Chicago</a>
+        </p>
+    </footer>
+
+    <!-- modal tab -->
+    <div class="modal hwp">
+        <div class="modal-content">
+            <span class="close-button close hwp">&times;</span>
+            <p>
+                Harold Washington Park <br>
+                5200 S Hyde Park Blvd, Chicago, IL 60615 <br>
+                note: has small lake.
+            </p>
+            <img src="https://i.ibb.co/jvjLYWy/IMG-1684.jpg" alt="IMG-1684">
+        </div>
+    </div>
+    
+    <div class="modal mdp">
+        <div class="modal-content">
+            <span class="close-button close mdp">&times;</span>
+            <p>
+                Maggie Daley Park <br>
+                337 E Randolph St, Chicago, IL 60601 <br>
+                note: can't bring pepper spray.
+            </p>
+            <img src="https://i.ibb.co/HdrwC5f/IMG-2115.jpg" alt="IMG-2115">
+        </div>
+    </div>
+
+    <div class="modal lsp">
+        <div class="modal-content">
+            <span class="close-button close mdp">&times;</span>
+            <p>
+                Lake Shore Park <br>
+                808 N Lake Shore Dr, Chicago, IL 60611 <br>
+                note: in front of MCA Chicago.
+            </p>
+            <img src="https://i.ibb.co/7Cn2Scy/IMG-2288.jpg" alt="IMG-2288" width="40%">
+        </div>
+    </div>
+
+    <div class="modal pp">
+        <div class="modal-content">
+            <span class="close-button close mdp">&times;</span>
+            <p>
+                Pritzker Park <br>
+                310 S State St, Chicago, IL 60604 <br>
+                note: sketchy.
+            </p>
+            <img src="https://i.ibb.co/f9QmZK4/IMG-1949.jpg" alt="IMG-1949" width="60%">
+        </div>
+    </div>    
+
+    <script>
+    var openModalBtns = document.querySelectorAll(".openModal");
+    var modals = document.querySelectorAll(".modal");
+
+    openModalBtns.forEach(function(btn, index) {
+        btn.addEventListener("click", function() {
+            modals[index].style.display = "block";
+        });
+    });
+
+    var closeButtons = document.querySelectorAll(".close");
+    closeButtons.forEach(function(btn, index) {
+        btn.addEventListener("click", function() {
+            modals[index].style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", function(event) {
+        modals.forEach(function(modal) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+    </script>
+</body>
+</html>

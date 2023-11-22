@@ -1,0 +1,39 @@
+body {
+font-family: 'Times New Roman', Times, serif;}
+
+.headline {
+    text-align: center;
+}
+
+.table {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(4, auto);
+}
+
+.column {
+    display: grid;
+    text-align: center;
+    place-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.column:not(:nth-last-child(-n+4)) {
+    border-bottom: 1px solid black;
+}
+
+.column:nth-child(odd) {
+    border-right: 1px solid black;
+}
+
+.column:nth-child(4n+2) {
+    border-right: 1px solid black;
+}
+
+.address, .comment, .history, .name {
+    display: grid;
+    white-space: normal;
+    margin: 10px;
+}

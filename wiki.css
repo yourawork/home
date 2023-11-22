@@ -1,0 +1,286 @@
+body {
+font-family: Helvetica, sans-serif;
+}
+
+#headline {
+    height: fit-content;
+    margin-top: 25px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-family: "input-mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+}
+
+marquee {
+    width: 60%;
+    background-color: black;
+    text-shadow: rgb(246, 255, 0) 1px 1px 5px;
+}
+
+#headline h2 {
+    margin: 0;
+    color: white;
+}
+
+#cvsite {
+    background-color: #e98bba;
+}
+
+#subscribe {
+    position: fixed;
+    width: calc(150px + 75px);
+    border: solid black 1px;
+    box-shadow: 2px 2.5px;
+    border-radius: 50%;
+    padding: 40px 20px;
+    background-color: red;
+    left: 1100px;
+}
+
+#subscribe input {
+    background-color: red;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.submitbtn, #sendbtn {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+a {
+    color: black;
+    margin: auto;
+}
+
+.box {
+    border: solid black 1px;
+    box-shadow: 2px 2.5px;
+    width: calc(300px + 100px);
+    margin: 15px auto; 
+    /* should change */
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+#contents {
+    background-color: lightgoldenrodyellow;
+}
+
+#intro {
+    background-color: rgb(68, 229, 68);
+    box-sizing: border-box;
+    
+}
+
+#image {
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+img {
+    width: calc(250px + 100px);
+}
+
+#appointment {
+    width: calc(250px + 100px);
+    padding: 30px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+#screentime {
+    width: calc(250px + 100px);
+    padding: 50px;
+    text-align: center;
+    background-color: orange;
+}
+
+.chicago {
+    width: calc(450px + 50px);
+}
+
+.chi {
+    width: calc(150px + 50px);
+    height: calc(70px + 30px);
+}
+
+#cinemachi {
+    background-color: rgb(231, 213, 54);
+}
+
+#chipark {
+    background-color: darkgreen;
+}
+
+#chibuy {
+    background-color: deeppink;
+}
+
+#chiplace {
+    background-color: dodgerblue;
+}
+
+.chi a {
+    color: white;
+    margin: auto;
+}
+
+#book {
+    background-color: #e98be1;
+}
+
+#eightball {
+    background-color: #35ac8a;
+    padding: 50px 0;
+    font-size: 22px;
+    justify-content: center;
+}
+
+#textlist {
+    background-color: #ff8e8e;
+    padding: 20px;
+    font-size: 14px;
+    justify-content: center;
+}
+
+#journal {
+    background-color: #3bceff;
+    padding: 27px 0;
+    font-size: 22px;
+}
+
+#tshirt {
+    background-color: orange;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+#areca {
+    font-size: 25px;
+    padding: 15px;
+    background-color: yellowgreen;
+    justify-content: center;
+}
+
+#randomwork {
+    background-color: #ffb384;
+    padding: 40px;
+    font-size: 18px;
+    justify-content: center;
+    margin: auto;
+}
+
+#webdev {
+    background-color: #e8ff63;
+    margin: auto;
+    justify-content: center;
+}
+
+#easy img {
+    width: 90%;
+    text-align: center;
+}
+
+#pwgenerator {
+    justify-content: center;
+    background-color: darkseagreen;
+}
+
+#topbtn {
+    position: fixed;
+    bottom: 36px;
+    right: 30px;
+    background-color: #000000;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    padding: 5px 7px;
+}
+
+#topbtn a {
+    color: white;
+    text-decoration: none;
+}
+
+#guestbook {
+    padding: 50px;
+    background-color: deepskyblue;
+    border-radius: 50%;
+}
+
+#guestbook input {
+    background-color: deepskyblue;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#sendbtn {
+    margin: 10px auto;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 120px;
+}
+
+
+@media screen and (max-width: 769px) {
+    .box {
+        border: solid black 1px;
+        box-shadow: 2px 2.5px;
+        width: calc(250px + 100px);
+        margin: 15px auto; 
+        /* should change */
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        box-sizing: border-box;
+    }
+
+    .chicago {
+        width: calc(100% - 80px);
+    }
+
+    #subscribe {
+        width: calc(250px + 100px);
+        margin: 15px auto; 
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        box-sizing: border-box;
+        position: inherit;
+    }
+
+    marquee {
+        width: 90%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #subscribe {
+        position: relative;
+        width: calc(200px + 30px);
+        border: solid black 1px;
+        box-shadow: 2px 2.5px;
+        border-radius: 50%;
+        padding: 50px 20px;
+        background-color: red;
+        left: 650px;
+    }
+}

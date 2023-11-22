@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dotoday.css">
+    
+    <!-- activ font -->
+<script>
+    (function(d) {
+      var config = {
+        kitId: 'oaw3hqh',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <!-- kepler -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'oaw3hqh',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <!-- date -->
+  <script type="text/javascript">
+    function showClock(){
+      var currentDate = new Date();
+      var divClock = document.getElementById('divClock');
+      var msg = " ";
+      if(currentDate.getHours()>12){     
+        msg += "PM ";
+        msg += currentDate.getHours()-12+":";
+     }
+     else {
+       msg += "AM ";
+       msg += currentDate.getHours()+":";
+     }
+
+      msg += currentDate.getMinutes()+":";
+      msg += currentDate.getSeconds()+" " + "(KST)";
+
+      divClock.innerText = msg;
+
+      if (currentDate.getMinutes()>58) {
+        divClock.style.color="red";
+      }
+      setTimeout(showClock,1000); 
+    }
+  </script>
+    <title>What am I doing today?</title>
+</head>
+<body>
+  <br> <br> <br> <br> <br>
+    <div class="headline">
+      <p>What am I doing today?</p>
+    </div>
+
+<div class="clock" id="current_date">
+  <script>
+    date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth() + 1;
+    day = date.getDate();
+    document.getElementById("current_date").innerHTML = "0" + month + "/" + day + "/" + year;
+  </script> &nbsp;
+    <body onload="showClock()">
+      <div class="clock" id="divClock"></div>
+    </body>
+</div> 
+
+<div class="randomtext">
+  <p id="randomText">랜덤 문구</p>
+  <script>
+    const phrases = [
+      "Watching <Blade Runner>",
+      "Reading <A Cyborg Manifesto>",
+      "Making Useless Website (like this)",
+      "Watching Baseball Games",
+      "Making Beef Mushroom Lasagna",
+      "Meeting friends that i love",
+      "Doing Yoga",
+      "Swimming",
+      "Watching <Good Doctor> on the Netflix.",
+      "Taking a short nap... zzz",
+      "Making Ricotta Cheese Salad Pasta"
+    ];
+
+    function getRandomPhrase() {
+      const randomIndex = Math.floor(Math.random() * phrases.length);
+      return phrases[randomIndex];
+    }
+
+    function updateRandomText() {
+      const randomTextElement = document.getElementById("randomText");
+      randomTextElement.textContent = getRandomPhrase();
+    }
+
+    document.addEventListener("DOMContentLoaded", updateRandomText);
+    setInterval(updateRandomText, 24 * 60 * 60 * 1000);
+  </script>
+</div>
+    
+</body>
+</html>

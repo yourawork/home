@@ -1,0 +1,37 @@
+body {
+    font-family: "marlide-display-variable",sans-serif;
+    font-variation-settings: 'wght' 300;
+    text-align: center;
+    font-weight: bold;
+    background-color: #b4f8b8;
+}
+
+.headline {
+    margin-top: 75px;
+    font-size: 36px;
+}
+
+#output {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+button {
+    background-color: white;
+    border-radius: 20px;
+    font-family: "marlide-display-variable",sans-serif;
+    font-variation-settings: 'wght' 300;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+
+}
+
+button:hover {
+    color: white;
+    background-color: #5a30cd;
+}
+
+.alert1 {
+    font-family: 'Times New Roman', Times, serif;
+}

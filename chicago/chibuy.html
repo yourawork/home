@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 things in Chicago</title>
+    <link rel="stylesheet" href="chibuy.css">
+    <script>
+        (function(d) {
+          var config = {
+            kitId: 'oaw3hqh',
+            scriptTimeout: 3000,
+            async: true
+          },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+      </script>
+</head>
+<body>
+    <div class="headline">
+        <p>25 things in Chicago</p>
+    </div>
+    <br>
+    <div class="table">
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+        <div class="circle openModal">thing</div>
+    </div>
+  <br> <br> <br>
+    <footer>
+        <hr>
+        <p>
+            last update: Sep 24th 2023 &nbsp; &nbsp;
+            if you know nice things in chicago, please let me <a href="mailto:hello@yourahong.com" class="link">know.</a> <br>
+            series: <a href="/chicago/chipark.html">25 parks in Chicago</a> &nbsp; <a href="/chicago/chiplace.html">25 places in Chicago</a>
+        </p>
+    </footer>
+
+    <!-- modal tab -->
+    <div class="modal hwp">
+        <div class="modal-content">
+            <span class="close-button close hwp">&times;</span>
+            <p>
+                thing <br>
+                
+            </p>
+        </div>
+    </div>
+
+    <script>
+    var openModalBtns = document.querySelectorAll(".openModal");
+    var modals = document.querySelectorAll(".modal");
+
+    openModalBtns.forEach(function(btn, index) {
+        btn.addEventListener("click", function() {
+            modals[index].style.display = "block";
+        });
+    });
+
+    var closeButtons = document.querySelectorAll(".close");
+    closeButtons.forEach(function(btn, index) {
+        btn.addEventListener("click", function() {
+            modals[index].style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", function(event) {
+        modals.forEach(function(modal) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+    </script>
+</body>
+</html>

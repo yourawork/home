@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="journal.css">
+    <!-- instrument serif font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+    <!-- nanum myeongjo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <title>youra's journal</title>
+    <script type="text/javascript">
+        function showClock(){
+          var currentDate = new Date();
+          var divClock = document.getElementById('divClock');
+          var msg = " ";
+          if(currentDate.getHours()>12){      //시간이 12보다 크다면 오후 아니면 오전
+            msg += "PM ";
+            msg += currentDate.getHours()-12+":";
+         }
+         else {
+           msg += "AM ";
+           msg += currentDate.getHours()+":";
+         }
+   
+          msg += currentDate.getMinutes()+":";
+          msg += currentDate.getSeconds()+" ";
+   
+          divClock.innerText = msg;
+   
+          if (currentDate.getMinutes()>58) {    //정각 1분전부터 빨강색으로 출력
+            divClock.style.color="red";
+          }
+          setTimeout(showClock,1000);  //1초마다 갱신
+        }
+      </script>
+</head>
+<body>
+    <!-- side nav box -->
+    <div class="sidenav">
+        <div id="sidenav-menu"> <br>
+            <h3>journal</h3>
+            <a href="http://www.yourahong.com">yourahong.com</a> <br> <br>
+        </div>
+        <hr>
+        <!-- side nav links -->
+        <div class="tab">
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var toggles = document.querySelectorAll("[data-toggle]");
+                    for (var i = 0; i < toggles.length; i++) {
+                        toggles[i].addEventListener("click", function(event) {
+                            event.preventDefault();
+                            var target = document.getElementById(this.getAttribute("data-toggle"));
+                            if (target) {
+                                target.hidden = !target.hidden;
+                                for (var j = 0; j < toggles.length; j++) {
+                                    if (toggles[j] !== this) {
+                                        var otherTarget = document.getElementById(toggles[j].getAttribute("data-toggle"));
+                                        otherTarget.hidden = true;
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+            </script>
+            <button data-toggle="myDiv">default</button><br>
+            <button data-toggle="myDiv1">05/04/2023</button><br>
+            <button data-toggle="myDiv2">05/05/2023</button> <br>
+            <button data-toggle="myDiv3">05/12/2023</button> <br>
+            <p>last update: 23/07/16</p>
+        </div>
+
+    </div>
+
+<!-- top nav clock -->
+    <div class="topnav">
+        <div class="clock" id="current_date">
+            <script>
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            document.getElementById("current_date").innerHTML = "0" + month + "/" + day + "/" + year;
+            </script>
+        </div> &nbsp;
+        <div class="intro">&nbsp; this is youra's space.</div>
+    </div>
+    
+    <!-- journal content -->
+    <div class="main">
+        <div id="myDiv" class="tab" hidden>
+            <p>date: &nbsp;</p><br>
+            <p>title: &nbsp; </p><br>
+            <p>content: &nbsp; </p>
+        </div>
+
+        <div id="myDiv1" class="tab" hidden>
+            <p>date: &nbsp; 05/04/2023</p><br>
+            <p>title: &nbsp; 모처럼 공강 날...</p><br>
+            <p>content: &nbsp; 영화제 포스터 부착하고 회의하고 디저트 먹고 또 회의한 날.. 내일은 어린이날.</p>
+        </div>
+
+        <div id="myDiv2" class="tab" hidden>
+            <p>date: &nbsp; 05/05/2023</p><br>
+            <p>title: &nbsp; 오늘은 어린이날...</p><br>
+            <p>content: &nbsp; 사촌동생들이 와서 놀고 갔다. 나는 어린이날 선물로 다마고치를 준비했는데 반응이 좋아서 뿌듯했다...
+                <br> 비가 와서 날씨가 우중충하다. 저녁엔 주문한 목걸이를 픽업했다. </p>
+        </div> 
+
+        <div id="myDiv3" class="tab" hidden>
+            <p>date: &nbsp; 05/12/2023</p><br>
+            <p>title: &nbsp; 금요일이지만 집에 일찍 간다</p><br>
+            <p>content: &nbsp; 학기 중반이 되니 너무 피곤해져서 결국 미술원 파티는 가지 않았다 ㅋㅋ
+            <br> 어차피 일요일에도 놀러가야 해서 오늘은 발제 준비를 하자고 다짐했지만 그냥 일찍 자버렸다..
+            <br> 일찍 자고 새벽에 깨는 날이 많아졌다. 종강까지 한 달이나 남았다는 사실이 날 힘들게 해 ~~
+            <br> 아 그리고 이 사이트의 서브도메인을 <a href="https://journal.yourahong.com">journal.yourahong.com</a>으로 바꾸었다.</p>
+        </div>
+        
+        
+    </div>
+
+    
+</body>
+</html>
